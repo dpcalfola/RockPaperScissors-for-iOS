@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
 	var comChoice: Rps = Rps.Rock
-
+	var userChoice: Rps = Rps.Rock
 
 
 	@IBOutlet weak var comImageView: UIImageView!
@@ -19,6 +19,10 @@ class ViewController: UIViewController {
 	@IBOutlet weak var comLabelView: UILabel!
 	@IBOutlet weak var userLabelView: UILabel!
 
+
+	@IBOutlet weak var userChoiceButtonRockView: UIButton!
+	@IBOutlet weak var userChoiceButtonPaperView: UIButton!
+	@IBOutlet weak var userChoiceButtonScissorsView: UIButton!
 
 
 
@@ -40,11 +44,17 @@ class ViewController: UIViewController {
 
 		switch title {
 			case "Rock":
-				userLabelView.text = "ROCK"
+				setReadySituation()
+				userChoiceButtonRockView.backgroundColor = #colorLiteral(red: 1, green: 0.6376401186, blue: 0.6469278336, alpha: 1)
+				userChoice = Rps.Rock
 			case "Paper":
-				userLabelView.text = "PAPER"
+				setReadySituation()
+				userChoiceButtonPaperView.backgroundColor = #colorLiteral(red: 1, green: 0.6376401186, blue: 0.6469278336, alpha: 1)
+				userChoice = Rps.Paper
 			case "Scissors":
-				userLabelView.text = "SCISSORS"
+				setReadySituation()
+				userChoiceButtonScissorsView.backgroundColor = #colorLiteral(red: 1, green: 0.6376401186, blue: 0.6469278336, alpha: 1)
+				userChoice = Rps.Scissors
 			default:
 				break
 		}
@@ -57,6 +67,17 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func selectButtonTapped(_ sender: UIButton) {
+
+		switch comChoice {
+			case .Rock:
+				comLabelView.text = "ROCK"
+			case .Paper:
+				comLabelView.text = "PAPER"
+			case .Scissors:
+				comLabelView.text = "SCISSOR"
+		}
+
+
 		print("select")
 	}
 
@@ -70,6 +91,12 @@ class ViewController: UIViewController {
 		userImageView.image = #imageLiteral(resourceName: "readyRight")
 		comLabelView.text = "Ready"
 		userLabelView.text = "Ready"
+		userChoiceButtonRockView.backgroundColor = #colorLiteral(red: 0.4225857258, green: 0.7771690488, blue: 0.7683463097, alpha: 1)
+		userChoiceButtonPaperView.backgroundColor = #colorLiteral(red: 0.4225857258, green: 0.7771690488, blue: 0.7683463097, alpha: 1)
+		userChoiceButtonScissorsView.backgroundColor = #colorLiteral(red: 0.4225857258, green: 0.7771690488, blue: 0.7683463097, alpha: 1)
+
+		// reset compuer choice
+		setComChoice()
 	}
 
 	func setComChoice() {
@@ -77,5 +104,20 @@ class ViewController: UIViewController {
 		comChoice = rpsRandom
 		print("comChoice:", comChoice)
 	}
-}
 
+	func setUserLaber(){
+		switch userChoice {
+			case .Rock:
+				userLabelView.text = "ROCK"
+			case .Paper:
+				userLabelView.text = "PAPER"
+			case .Scissors:
+				userLabelView.text = "SCISSOR"
+		}
+
+
+
+
+	}
+
+}
