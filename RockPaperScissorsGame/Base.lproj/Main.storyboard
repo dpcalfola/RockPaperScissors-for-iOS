@@ -89,53 +89,65 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="bIv-FS-BiV">
                                 <rect key="frame" x="30" y="544" width="354" height="85"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY7-RZ-q6h">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xY7-RZ-q6h">
                                         <rect key="frame" x="0.0" y="0.0" width="113.5" height="85"/>
+                                        <color key="backgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xY7-RZ-q6h" secondAttribute="height" multiplier="4:3" id="9VD-SR-zd2"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Rock" titleAlignment="center">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
-                                            <color key="baseBackgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Rock">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wA-US-ddR">
                                         <rect key="frame" x="120.5" y="0.0" width="113" height="85"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Paper" titleAlignment="center">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
-                                            <color key="baseBackgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
+                                        <color key="backgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6wA-US-ddR" secondAttribute="height" multiplier="4:3" id="Cjo-7g-PPs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Paper">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-gU-s3X">
                                         <rect key="frame" x="240.5" y="0.0" width="113.5" height="85"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Scissors" titleAlignment="center">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
-                                            <color key="baseBackgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
+                                        <color key="backgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nPj-gU-s3X" secondAttribute="height" multiplier="4:3" id="owY-cP-AkR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Scissors">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="63t-fl-8Jf">
-                                <rect key="frame" x="30" y="722" width="354" height="50"/>
+                                <rect key="frame" x="30" y="719" width="354" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6q-Lg-Ycj">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Reset">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                            <color key="baseBackgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="48"/>
+                                        <color key="backgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy3-03-xBQ">
-                                        <rect key="frame" x="181" y="0.0" width="173" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Reset">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                            <color key="baseBackgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="181" y="0.0" width="173" height="48"/>
+                                        <color key="backgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Select">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -160,9 +172,9 @@
                             <constraint firstItem="bIv-FS-BiV" firstAttribute="top" secondItem="t01-3a-RwN" secondAttribute="bottom" constant="45" id="Ib0-9F-PcQ"/>
                             <constraint firstItem="t01-3a-RwN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SEv-uP-QUe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIv-FS-BiV" secondAttribute="trailing" constant="30" id="Xab-K7-XOT"/>
+                            <constraint firstItem="63t-fl-8Jf" firstAttribute="top" secondItem="bIv-FS-BiV" secondAttribute="bottom" constant="90" id="Xsj-Mb-voG"/>
                             <constraint firstItem="63t-fl-8Jf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="g4z-CQ-nyd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="63t-fl-8Jf" secondAttribute="trailing" constant="30" id="lls-aV-dhW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="63t-fl-8Jf" secondAttribute="bottom" constant="90" id="pMl-gH-Ewh"/>
                             <constraint firstItem="bIv-FS-BiV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6Q-n6-Qbp"/>
                             <constraint firstItem="63t-fl-8Jf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vv7-g9-hED"/>
                             <constraint firstItem="t01-3a-RwN" firstAttribute="top" secondItem="9J3-2N-V2n" secondAttribute="bottom" constant="55" id="waK-2U-V2y"/>
