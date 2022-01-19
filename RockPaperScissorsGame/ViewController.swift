@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	var comChoice: Rps = Rps.Rock
+
 
 
 	@IBOutlet weak var comImageView: UIImageView!
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 
 		setReadySituation()
+		setComChoice()
 
 
 		// Do any additional setup after loading the view.
@@ -32,12 +35,18 @@ class ViewController: UIViewController {
 
 
 	@IBAction func userChoiceButtonTapped(_ sender: UIButton) {
-		if sender.currentTitle == "Rock"{
-			userLabelView.text = "ROCK"
-		}else if sender.currentTitle == "Paper"{
-			userLabelView.text = "PAPER"
-		}else if sender.currentTitle == "Scissors"{
-			userLabelView.text = "SCISSORS"
+
+		guard let title = sender.currentTitle else { return }
+
+		switch title {
+			case "Rock":
+				userLabelView.text = "ROCK"
+			case "Paper":
+				userLabelView.text = "PAPER"
+			case "Scissors":
+				userLabelView.text = "SCISSORS"
+			default:
+				break
 		}
 		print("user")
 	}
@@ -61,6 +70,12 @@ class ViewController: UIViewController {
 		userImageView.image = #imageLiteral(resourceName: "readyRight")
 		comLabelView.text = "Ready"
 		userLabelView.text = "Ready"
+	}
+
+	func setComChoice() {
+		guard let rpsRandom = Rps(rawValue: Int.random(in: 0...2)) else { return }
+		comChoice = rpsRandom
+		print("comChoice:", comChoice)
 	}
 }
 

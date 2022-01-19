@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51232CD279835E800F551DD /* RpsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51232CC279835E800F551DD /* RpsEnum.swift */; };
 		A574235B279449E200CD3F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574235A279449E200CD3F62 /* AppDelegate.swift */; };
 		A574235D279449E200CD3F62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574235C279449E200CD3F62 /* SceneDelegate.swift */; };
 		A574235F279449E200CD3F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574235E279449E200CD3F62 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A51232CC279835E800F551DD /* RpsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpsEnum.swift; sourceTree = "<group>"; };
 		A5742357279449E200CD3F62 /* RockPaperScissorsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissorsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A574235A279449E200CD3F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A574235C279449E200CD3F62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				A574235A279449E200CD3F62 /* AppDelegate.swift */,
 				A574235C279449E200CD3F62 /* SceneDelegate.swift */,
 				A574235E279449E200CD3F62 /* ViewController.swift */,
+				A51232CC279835E800F551DD /* RpsEnum.swift */,
 				A5742360279449E200CD3F62 /* Main.storyboard */,
 				A5742363279449E300CD3F62 /* Assets.xcassets */,
 				A5742365279449E300CD3F62 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				A574235F279449E200CD3F62 /* ViewController.swift in Sources */,
 				A574235B279449E200CD3F62 /* AppDelegate.swift in Sources */,
+				A51232CD279835E800F551DD /* RpsEnum.swift in Sources */,
 				A574235D279449E200CD3F62 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
