@@ -23,11 +23,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		comImageView.image = #imageLiteral(resourceName: "readyLeft")
-		userImageView.image = #imageLiteral(resourceName: "readyRight")
-		comLabelView.text = "Ready"
-		userLabelView.text = "Ready"
-
+		setReadySituation()
 
 
 		// Do any additional setup after loading the view.
@@ -36,10 +32,18 @@ class ViewController: UIViewController {
 
 
 	@IBAction func userChoiceButtonTapped(_ sender: UIButton) {
+		if sender.currentTitle == "Rock"{
+			userLabelView.text = "ROCK"
+		}else if sender.currentTitle == "Paper"{
+			userLabelView.text = "PAPER"
+		}else if sender.currentTitle == "Scissors"{
+			userLabelView.text = "SCISSORS"
+		}
 		print("user")
 	}
 
 	@IBAction func resetButtonTapped(_ sender: UIButton) {
+		setReadySituation()
 		print("reset")
 	}
 
@@ -48,5 +52,15 @@ class ViewController: UIViewController {
 	}
 
 
+
+
+	// func area
+
+	func setReadySituation(){
+		comImageView.image = #imageLiteral(resourceName: "readyLeft")
+		userImageView.image = #imageLiteral(resourceName: "readyRight")
+		comLabelView.text = "Ready"
+		userLabelView.text = "Ready"
+	}
 }
 
