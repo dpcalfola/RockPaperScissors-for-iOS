@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="t01-3a-RwN">
-                                <rect key="frame" x="37.5" y="239" width="335" height="260"/>
+                                <rect key="frame" x="39.5" y="239" width="335" height="260"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PyN-Px-afg">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="260"/>
@@ -86,10 +87,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="bIv-FS-BiV">
-                                <rect key="frame" x="30" y="544" width="350" height="84"/>
+                                <rect key="frame" x="30" y="544" width="354" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY7-RZ-q6h">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="85"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xY7-RZ-q6h" secondAttribute="height" multiplier="4:3" id="9VD-SR-zd2"/>
                                         </constraints>
@@ -100,7 +101,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wA-US-ddR">
-                                        <rect key="frame" x="119" y="0.0" width="112" height="84"/>
+                                        <rect key="frame" x="120.5" y="0.0" width="113" height="85"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Paper" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
@@ -108,7 +109,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-gU-s3X">
-                                        <rect key="frame" x="238" y="0.0" width="112" height="84"/>
+                                        <rect key="frame" x="240.5" y="0.0" width="113.5" height="85"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Scissors" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
@@ -117,11 +118,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="63t-fl-8Jf">
-                                <rect key="frame" x="30" y="722" width="350" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="63t-fl-8Jf">
+                                <rect key="frame" x="30" y="722" width="354" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6q-Lg-Ycj">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Reset">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
@@ -129,10 +130,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy3-03-xBQ">
-                                        <rect key="frame" x="190" y="0.0" width="160" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="xl9-nz-8Yo"/>
-                                        </constraints>
+                                        <rect key="frame" x="181" y="0.0" width="173" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Reset">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
@@ -142,7 +140,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Choice?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J3-2N-V2n">
-                                <rect key="frame" x="75" y="104" width="260" height="80"/>
+                                <rect key="frame" x="77" y="104" width="260" height="80"/>
                                 <color key="backgroundColor" red="0.50980392159999999" green="0.76862745099999996" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="5ia-og-BbU"/>
