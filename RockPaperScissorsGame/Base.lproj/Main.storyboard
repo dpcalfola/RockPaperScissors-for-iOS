@@ -197,6 +197,7 @@
                     <connections>
                         <outlet property="comImageView" destination="yFC-zq-ioh" id="GuJ-gA-qbE"/>
                         <outlet property="comLabelView" destination="pXd-4z-Pmk" id="DAu-E9-leC"/>
+                        <outlet property="mainLabelView" destination="9J3-2N-V2n" id="aCF-Yy-EVf"/>
                         <outlet property="userChoiceButtonPaperView" destination="6wA-US-ddR" id="NrK-1t-Azc"/>
                         <outlet property="userChoiceButtonRockView" destination="xY7-RZ-q6h" id="17b-7x-UCU"/>
                         <outlet property="userChoiceButtonScissorsView" destination="nPj-gU-s3X" id="Oe6-In-zet"/>

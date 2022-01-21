@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 	var userChoice: Rps = Rps.Rock
 
 
+	@IBOutlet weak var mainLabelView: UILabel!
+
+
 	@IBOutlet weak var comImageView: UIImageView!
 	@IBOutlet weak var userImageView: UIImageView!
 
@@ -23,6 +26,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var userChoiceButtonRockView: UIButton!
 	@IBOutlet weak var userChoiceButtonPaperView: UIButton!
 	@IBOutlet weak var userChoiceButtonScissorsView: UIButton!
+
 
 
 
@@ -58,15 +62,16 @@ class ViewController: UIViewController {
 			default:
 				break
 		}
-	}
+	}// userChoiceButtonTapped
 
 
 	@IBAction func resetButtonTapped(_ sender: UIButton) {
 		setReadySituation()
 		print("reset")
-	}
+	}// resetButtonTapped
 
-	//
+
+
 	@IBAction func selectButtonTapped(_ sender: UIButton) {
 
 		// set Labels
@@ -76,7 +81,8 @@ class ViewController: UIViewController {
 		comImageView.image = getChoiceImage(choice: comChoice)
 		userImageView.image = getChoiceImage(choice: userChoice)
 
-
+		// run game
+		showDownLogic()
 
 		print("select")
 	}
@@ -97,6 +103,8 @@ class ViewController: UIViewController {
 		userChoiceButtonRockView.backgroundColor = #colorLiteral(red: 0.4225857258, green: 0.7771690488, blue: 0.7683463097, alpha: 1)
 		userChoiceButtonPaperView.backgroundColor = #colorLiteral(red: 0.4225857258, green: 0.7771690488, blue: 0.7683463097, alpha: 1)
 		userChoiceButtonScissorsView.backgroundColor = #colorLiteral(red: 0.4225857258, green: 0.7771690488, blue: 0.7683463097, alpha: 1)
+		mainLabelView.text = "Your Choice?"
+
 
 		// reset compuer choice
 		setComChoice()
@@ -132,26 +140,17 @@ class ViewController: UIViewController {
 
 
 	func showDownLogic() {
-
-		switch comChoice {
-			case .Rock:
-				comImageView.image = #imageLiteral(resourceName: "rock")
-				switch userChoice {
-					case .Rock:
-						userImageView.image = #imageLiteral(resourceName: "rock")
-					case .Paper:
-						userImageView.image = #imageLiteral(resourceName: "readyLeft")
-					case .Scissors:
-						userImageView.image = #imageLiteral(resourceName: "scissors")
-				}
-			case .Paper:
-				comImageView.image = #imageLiteral(resourceName: "paper")
-			case .Scissors:
-				comImageView.image = #imageLiteral(resourceName: "scissors")
+		if  userChoice == comChoice {
+			mainLabelView.text = "Tie Game"
+		}else if
+			(userChoice == .Rock && comChoice == .Scissors) ||
+			(userChoice == .Paper && comChoice == .Rock) ||
+			(userChoice == .Scissors && comChoice == .Paper) {
+			mainLabelView.text = "You Win"
+		}else {
+			mainLabelView.text = "You Lose"
 		}
-
-
-	}
+	}//showDownLogic
 
 }
 
