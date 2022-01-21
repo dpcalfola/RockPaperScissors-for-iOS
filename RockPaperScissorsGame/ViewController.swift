@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 
 		setReadySituation()
-		setComChoice()
+
 
 
 		// Do any additional setup after loading the view.
@@ -68,13 +68,17 @@ class ViewController: UIViewController {
 
 	@IBAction func selectButtonTapped(_ sender: UIButton) {
 
+		// set Labels
+		comLabelView.text = getChoiceString(choice: comChoice)
+		userLabelView.text = getChoiceString(choice: userChoice)
+
 		switch comChoice {
 			case .Rock:
-				comLabelView.text = "ROCK"
+				comImageView.image = #imageLiteral(resourceName: "rock")
 			case .Paper:
-				comLabelView.text = "PAPER"
+				comImageView.image = #imageLiteral(resourceName: "paper")
 			case .Scissors:
-				comLabelView.text = "SCISSOR"
+				comImageView.image = #imageLiteral(resourceName: "scissors")
 		}
 
 
@@ -105,14 +109,14 @@ class ViewController: UIViewController {
 		print("comChoice:", comChoice)
 	}
 
-	func setUserLaber(){
-		switch userChoice {
+	func getChoiceString(choice: Rps) -> String {
+		switch choice {
 			case .Rock:
-				userLabelView.text = "ROCK"
+				return "ROCK"
 			case .Paper:
-				userLabelView.text = "PAPER"
+				return "PAPER"
 			case .Scissors:
-				userLabelView.text = "SCISSOR"
+				return "SCISSORS"
 		}
 
 
