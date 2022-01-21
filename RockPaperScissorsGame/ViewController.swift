@@ -58,32 +58,31 @@ class ViewController: UIViewController {
 			default:
 				break
 		}
-		print("user")
 	}
+
 
 	@IBAction func resetButtonTapped(_ sender: UIButton) {
 		setReadySituation()
 		print("reset")
 	}
 
+	//
 	@IBAction func selectButtonTapped(_ sender: UIButton) {
 
 		// set Labels
 		comLabelView.text = getChoiceString(choice: comChoice)
 		userLabelView.text = getChoiceString(choice: userChoice)
+		// set images
+		comImageView.image = getChoiceImage(choice: comChoice)
+		userImageView.image = getChoiceImage(choice: userChoice)
 
-		switch comChoice {
-			case .Rock:
-				comImageView.image = #imageLiteral(resourceName: "rock")
-			case .Paper:
-				comImageView.image = #imageLiteral(resourceName: "paper")
-			case .Scissors:
-				comImageView.image = #imageLiteral(resourceName: "scissors")
-		}
 
 
 		print("select")
 	}
+
+
+
 
 
 
@@ -118,10 +117,42 @@ class ViewController: UIViewController {
 			case .Scissors:
 				return "SCISSORS"
 		}
+	}
+
+	func getChoiceImage(choice: Rps) -> UIImage {
+		switch choice {
+			case .Rock:
+				return #imageLiteral(resourceName: "rock")
+			case .Paper:
+				return #imageLiteral(resourceName: "paper")
+			case .Scissors:
+				return #imageLiteral(resourceName: "scissors")
+		}
+	}
 
 
+	func showDownLogic() {
+
+		switch comChoice {
+			case .Rock:
+				comImageView.image = #imageLiteral(resourceName: "rock")
+				switch userChoice {
+					case .Rock:
+						userImageView.image = #imageLiteral(resourceName: "rock")
+					case .Paper:
+						userImageView.image = #imageLiteral(resourceName: "readyLeft")
+					case .Scissors:
+						userImageView.image = #imageLiteral(resourceName: "scissors")
+				}
+			case .Paper:
+				comImageView.image = #imageLiteral(resourceName: "paper")
+			case .Scissors:
+				comImageView.image = #imageLiteral(resourceName: "scissors")
+		}
 
 
 	}
 
 }
+
+
