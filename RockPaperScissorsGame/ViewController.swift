@@ -22,12 +22,10 @@ class ViewController: UIViewController {
 	@IBOutlet weak var comLabelView: UILabel!
 	@IBOutlet weak var userLabelView: UILabel!
 
-
 	@IBOutlet weak var userChoiceButtonRockView: UIButton!
 	@IBOutlet weak var userChoiceButtonPaperView: UIButton!
 	@IBOutlet weak var userChoiceButtonScissorsView: UIButton!
-
-
+	@IBOutlet weak var selectButtonView: UIButton!
 
 
 	override func viewDidLoad() {
@@ -40,6 +38,7 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view.
 
 	}//viewDidLoad
+
 
 
 	@IBAction func userChoiceButtonTapped(_ sender: UIButton) {
@@ -62,17 +61,30 @@ class ViewController: UIViewController {
 			default:
 				break
 		}
+		// activate when userChoiceButtonTapped
+		selectButtonView.isEnabled = true
 	}// userChoiceButtonTapped
 
 
 	@IBAction func resetButtonTapped(_ sender: UIButton) {
 		setReadySituation()
+
+		// activate choice buttons
+		userChoiceButtonRockView.isEnabled = true
+		userChoiceButtonPaperView.isEnabled = true
+		userChoiceButtonScissorsView.isEnabled = true
+		// inactivate select button
+		selectButtonView.isEnabled = false
+
+		// test print
 		print("reset")
 	}// resetButtonTapped
 
 
 
 	@IBAction func selectButtonTapped(_ sender: UIButton) {
+
+		// inactivated when userChoiceButton is not chosen
 
 		// set Labels
 		comLabelView.text = getChoiceString(choice: comChoice)
@@ -124,6 +136,7 @@ class ViewController: UIViewController {
 				return "PAPER"
 			case .Scissors:
 				return "SCISSORS"
+
 		}
 	}
 
@@ -140,6 +153,8 @@ class ViewController: UIViewController {
 
 
 	func showDownLogic() {
+
+		// show result
 		if  userChoice == comChoice {
 			mainLabelView.text = "Tie Game"
 		}else if
@@ -150,6 +165,14 @@ class ViewController: UIViewController {
 		}else {
 			mainLabelView.text = "You Lose"
 		}
+
+		// inactivate buttons without ResetButton
+		userChoiceButtonRockView.isEnabled = false
+		userChoiceButtonPaperView.isEnabled = false
+		userChoiceButtonScissorsView.isEnabled = false
+		selectButtonView.isEnabled = false
+
+
 	}//showDownLogic
 
 }
